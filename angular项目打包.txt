@@ -1,0 +1,6 @@
+npm install @ionic/angular@latest --save
+cnpm i -g cordova ionic
+添加ionic.config.json  从ionic项目拷贝
+添加config.xml   运行 ionic integrations enable cordova --add
+
+ionic cordova platform add andriod

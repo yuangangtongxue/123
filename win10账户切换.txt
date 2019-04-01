@@ -1,0 +1,6 @@
+右键左下角开始菜单--->点击windows powershell（管理员）打开终端
+输入： net user administrator /active:yes  启用管理员
+原网址：https://jingyan.baidu.com/article/fdffd1f87f7d6ff3e98ca1ff.html
+https://blog.csdn.net/qq_40501708/article/details/83687708
+
+

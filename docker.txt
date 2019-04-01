@@ -1,0 +1,32 @@
+一、docker是什么：
+Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。
+开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、 bare metal、OpenStack 集群和其他的基础应用平台。 
+Docker通常用于如下场景：
+web应用的自动化打包和发布；
+自动化测试和持续集成、发布；
+在服务型环境中部署和调整数据库或其他的后台应用；
+从头编译或者扩展现有的OpenShift或Cloud Foundry平台来搭建自己的PaaS环境。
+
+
+二、win10家庭版安装docker
+
+1.安装Hyper-v
+  (1).新建一个.cmd文件，将以下内容添加到该文件
+
+pushd "%~dp0"
+
+dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt
+
+for /f %%i in ('findstr /i . hyper-v.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+
+del hyper-v.txt
+
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
+
+
+  (2).然后以管理员身份打开这个文件，保存好文件，提示重启后重启，就安装好了Hyper-V。
+
+三、相关知识点
+
+1.镜像和容器两概念的区别：
+镜像是Docker生命周期中的构建或打包阶段，容器则是启动或执行阶段。用户基于镜像来运行自己的容器。 可以把镜像认为是容器的“源代码”。

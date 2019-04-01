@@ -1,0 +1,13 @@
+ERROR in ./node_modules/_ng2-mqtt@0.1.2@ng2-mqtt/index.ts
+Module build failed (from ./node_modules/_@ngtools_webpack@7.3.5@@ngtools/webpack/src/index.js):
+Error: D:\qianduan\angular\waterproject\node_modules\_ng2-mqtt@0.1.2@ng2-mqtt\index.ts is missing from the TypeScript compilation. Please make sure it is in your tsconfig via the 'files' or 'include' property.
+The missing file seems to be part of a third party library. TS files in published libraries are often a sign of a badly packaged library. Please open an issue in the library repository to alert its author and ask them to package the library using the Angular Package Format (https://goo.gl/jB3GVv).
+    at AngularCompilerPlugin.getCompiledFile (D:\qianduan\angular\waterproject\node_modules\_@ngtools_webpack@7.3.5@@ngtools\webpack\src\angular_compiler_plugin.js:752:23)
+    at plugin.done.then (D:\qianduan\angular\waterproject\node_modules\_@ngtools_webpack@7.3.5@@ngtools\webpack\src\loader.js:41:31)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+
+2019.3.8 ng serve 时发生的错误
+  解决方法：npm install rimraf -g //安装删除指令
+rimraf node_modules //卸载node库
+npm install //重装
+****慎用cnpm

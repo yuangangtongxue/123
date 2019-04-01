@@ -1,0 +1,2 @@
+npm i echarts --save
+npm install @types/echarts --save

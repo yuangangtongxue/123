@@ -1,0 +1,11 @@
+1.安装时angular失败
+angularcli用typescript编写，
+需要安装npm install -g typescript typings
+如果你之前安装失败过，最好在安装angular-cli之前先卸载干净，用以下两句：
+卸载旧版本
+npm uninstall -g angular-cli
+npm cache clean
+卸载新版本
+npm uninstall @angular/cli
+然后npm install -g @angular/cli
+需要的各种环境配置好

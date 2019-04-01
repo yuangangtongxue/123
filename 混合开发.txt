@@ -1,0 +1,19 @@
+Html 5和Native的交互
+WebView 本来就支持js和Java相互调用，你只需要开启 WebView 的JavaScript脚本执行，然后通过代码 mWebView.addJavascriptInterface(new JsBridge(), "bxbxbai"); 向Html 5页面时注入一个Java对象，然后就可以在Html 5页面中调用Native的功能了
+相关博客：
+https://blog.csdn.net/weixin_41885053/article/details/81011853
+https://www.tuicool.com/articles/m6RVFfA
+andriod工程中使用webview加载前端页面的三种方式：
+方式1. 加载一个网页：
+  webView.loadUrl("http://www.google.com/");
+ 
+方式2：加载apk包中的html页面
+  webView.loadUrl("file:///android_asset/test.html");
+
+方式3：加载手机本地的html页面
+   webView.loadUrl("content://com.android.htmlfileprovider/sdcard/test.html");
+
+WebViewClient :主要帮助WebView处理各种通知、请求事件。
+WebChromeClient主要辅助WebView处理Javascript的对话框、网站图标、网站title、加载进度等
+
+android大家都知道就是得有一个"main" Acitvity,cordova就是在mainActivity中加载一个webview然后webview加载html +js  

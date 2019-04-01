@@ -1,0 +1,29 @@
+需要连WIFI: YG-SYSTEM
+密码：yg#21system!
+
+服务器地址：
+Websocket:
+192.168.31.164
+port: 25555
+
+
+连接建立后发送：
+{"msg_type":"user_access", "user_id":"lvyan", "password":"88888888"}
+收到回复消息后判断是否登录成功；
+
+
+接下来发送以下几条消息，观察，理解数据结构：
+{"msg_type":"request_all_areas"}
+{"msg_type":"request_all_rooms"}
+{"msg_type":"request_all_cameras"}
+{"msg_type":"request_all_entities"}
+{"msg_type":"request_all_states"}
+{"msg_type":"request_all_actions"}
+{"msg_type":"request_all_laws"}
+{"msg_type":"request_all_states_value"}
+
+获取到的json数据格式有可能比较长，可在网上或利用IDE工具整理其格式，方便阅读。
+
+              "../node_modules/echarts/dist/echarts.min.js",
+              "../node_modules/echarts/map/js/china.js",
+              "../node_modules/echarts/dist/extension/bmap.js"

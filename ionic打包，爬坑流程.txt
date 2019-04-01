@@ -1,0 +1,24 @@
+
+需要的工具：（版本不一定要最新的，建议下稳定版）
+node
+npm
+ionic
+cordova
+jdk
+sdk
+gradle
+安装 ionic cordova：npm install -g ionic cordova
+安装jdk：安装教程，配置环境详见~https://blog.csdn.net/love4399/article/details/77164500（%JAVA_HOME%\bin最好放在path所有路径的最前面，这是一个坑）
+安装sdk：安装教程，配置环境详见~https://blog.csdn.net/love4399/article/details/77164500  （path顺序：%ANDROID_HOME%\build-tools\27.0.3   %ANDROID_HOME%\platform-tools    %ANDROID_HOME%\tools;）
+安装gradle: 安装教程，配置环境详见~https://jingyan.baidu.com/article/00a07f38706f0b82d028dcf3.html
+
+
+ionic创建应用：ionic start projectName [templateName] 
+添加Android平台：ionic cordova platform add android 
+构建Android项目：ionic cordova build android 
+这样会在platforms\android\app\build\outputs\apk\debug目录下生成一个apk文件，插上数据线下载到手机
+以上就是app测试版本的内容，若发布还需修改apk的签名，此处之后补充
+
+坑：1.jdk和sdk下对版本
+2.环境变量中JAVA_HOME中的path注意顺序（andriod_home也可能要注意）
+3.打包成功后apk需要用数据线传到手机上，通过微信或qq发安装会报错
